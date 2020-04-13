@@ -1,9 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  // debugger; // when devtools is open it marks a breakpoint
-  return <p>Hi all</p>;
-}
+import App from "./components/App";
 
-render(<App />, document.getElementById("app"));
+render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("app")
+);
